@@ -10,10 +10,15 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    //@IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet var nameField: UITextField!
+    @IBOutlet var phoneField: UITextField!
+    @IBOutlet var altPhoneField: UITextField!
+    @IBOutlet var emailField: UITextField!
+    
 
 
-    var detailItem: AnyObject? {
+    var detailItem: User? {
         didSet {
             // Update the view.
             self.configureView()
@@ -22,12 +27,16 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail: AnyObject = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+        if let detail = detailItem {
+            if nameField != nil {
+            nameField.text = detail.name
+            phoneField.text = detail.phone
+            altPhoneField.text = detail.altPhone
+            emailField.text = detail.email
             }
         }
-    }
+        
+           }
 
     override func viewDidLoad() {
         super.viewDidLoad()
