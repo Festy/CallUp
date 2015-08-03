@@ -48,6 +48,28 @@ class DetailViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func changeDetail(sender: AnyObject!){
+        
+        if sender === nameField {
+            detailItem?.name = nameField.text
+        }
+            
+        else if sender === phoneField {
+            detailItem?.phone = phoneField.text
+        }
+            
+        else if sender === altPhoneField{
+            detailItem?.altPhone = altPhoneField.text
+        }
+        
+        else if sender === emailField{
+            detailItem?.email = emailField.text
+
+        }
+        
+    }
+  
 
 
 }

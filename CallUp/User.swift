@@ -20,11 +20,36 @@ class User{
     // Photo (Imported from FB)
     // Groups
     
-    var name: String
-    var phone: String
-    var altPhone: String
-    var email: String
+    var name: String{
+        didSet{
+            postDidChangeNotification()
+        }
+    }
+    var phone: String{
+        didSet{
+            postDidChangeNotification()
+        }
+    }
+
+    var altPhone: String{
+        didSet{
+            postDidChangeNotification()
+        }
+    }
+
+    var email: String{
+        didSet{
+            postDidChangeNotification()
+        }
+    }
+
+    let ThingDidChangeNotification = "MyThingDidChangeNotification"
+
     
+    func postDidChangeNotification(){
+        let center = NSNotificationCenter.defaultCenter()
+        center.postNotificationName(ThingDidChangeNotification, object: self)
+    }
     init(name: String, phone: String, altPhone: String, email: String){
         self.name = name
         self.phone = phone

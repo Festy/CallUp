@@ -19,6 +19,19 @@ class MasterViewController: UITableViewController {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func thingDidChange(notification: NSNotification){
+        if let changedThing = notification.object as? User{
+            for(index, user) in enumerate(users){
+                if user === changedThing {
+                    let path = NSIndexPath(forItem: index, inSection: 0)
+                    tableView.reloadRowsAtIndexPaths([path], withRowAnimation: .None)
+                }
+            }
+        }
+    }
+
+    let ThingDidChangeNotification = "MyThingDidChangeNotification"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +40,23 @@ class MasterViewController: UITableViewController {
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
+        let center = NSNotificationCenter.defaultCenter()
+        center.addObserver(self, selector: "thingDidChange:", name: ThingDidChangeNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    var userCounter = 0
     func insertNewObject(sender: AnyObject) {
-//        users.insert(NSDate(), atIndex: 0)
-//        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-//        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        var userName = "name\(++userCounter)"
+        var userCounter_s = String(userCounter)
+        let newUser = User(name: userName, phone: userCounter_s, altPhone: userCounter_s, email: "\(userName)@gmail.com")
+        users.insert(newUser, atIndex: 0)
+        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+        self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
 
     // MARK: - Segues
