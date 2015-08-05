@@ -15,6 +15,7 @@
 		8CD34F7A1B6860B900223D92 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8CD34F781B6860B900223D92 /* LaunchScreen.xib */; };
 		8CD34F861B6860B900223D92 /* CallUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD34F851B6860B900223D92 /* CallUpTests.swift */; };
 		8CD34F901B68618C00223D92 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD34F8F1B68618C00223D92 /* User.swift */; };
+		8CE5C2D01B71757100046792 /* FrontTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE5C2CF1B71757100046792 /* FrontTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8CD34F841B6860B900223D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CD34F851B6860B900223D92 /* CallUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallUpTests.swift; sourceTree = "<group>"; };
 		8CD34F8F1B68618C00223D92 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8CE5C2CF1B71757100046792 /* FrontTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				8CD34F711B6860B900223D92 /* DetailViewController.swift */,
 				8CD34F8F1B68618C00223D92 /* User.swift */,
 				8CD34F731B6860B900223D92 /* Main.storyboard */,
+				8CE5C2CF1B71757100046792 /* FrontTableViewController.swift */,
 				8CD34F761B6860B900223D92 /* Images.xcassets */,
 				8CD34F781B6860B900223D92 /* LaunchScreen.xib */,
 				8CD34F6B1B6860B900223D92 /* Supporting Files */,
@@ -222,6 +225,7 @@
 				8CD34F721B6860B900223D92 /* DetailViewController.swift in Sources */,
 				8CD34F701B6860B900223D92 /* MasterViewController.swift in Sources */,
 				8CD34F6E1B6860B900223D92 /* AppDelegate.swift in Sources */,
+				8CE5C2D01B71757100046792 /* FrontTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +421,7 @@
 				8CD34F8B1B6860B900223D92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8CD34F8C1B6860B900223D92 /* Build configuration list for PBXNativeTarget "CallUpTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +430,7 @@
 				8CD34F8E1B6860B900223D92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

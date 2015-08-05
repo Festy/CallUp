@@ -34,10 +34,12 @@ class MasterViewController: UITableViewController {
     let ThingDidChangeNotification = "MyThingDidChangeNotification"
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //[super viewDidLoad];
+        //[self.navigationController setNavigationBarHidden:NO animated:YES];
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
+        
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        //self.navigationController?.setNavigationBarHidden(false, animated: true)
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
         let center = NSNotificationCenter.defaultCenter()
